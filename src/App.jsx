@@ -1,6 +1,5 @@
-import './App.css'
 import Calculator from './components/Calculator'
-// import Test from './components/Test'
+import './styles/App.css'
 
 function App() {
 
@@ -8,7 +7,6 @@ function App() {
     <>
 
       <Calculator />
-      {/* <Test /> */}
 
     </>
   )

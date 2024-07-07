@@ -1,0 +1,114 @@
+html {
+    position: relative;
+    height: 100vh;
+    background-color: #1B9AAA;
+}
+
+.title {
+    text-align: center;
+    color: #303036;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.calculator {
+    background-color: #303036;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20rem;
+    height: 30rem;
+    border: 0.4rem solid #FFFAFF;
+    border-radius: 2rem;
+}
+
+.display {
+    background-color: #FFFAFF;
+    color: #303036;
+    border-radius: 0.8rem;
+    width: 16rem;
+    height: 3rem;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+    font-size: 2rem;
+    text-align: right;
+    overflow: hidden;
+}
+
+.all-buttons {
+    width: 16rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.btn {
+    width: 4rem;
+    height: 3rem;
+    background-color: #087CA7;
+    color: #FFFAFF;
+    border: 1px solid #303036;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.ac, .c {
+    background-color: #F8F32B;
+    color: #303036;
+}
+
+.divide {
+    grid-area: 1/4;
+    background-color: #DA4167;
+}
+
+.divide:focus {
+    background-color: #da4167ac;
+}
+
+.multiply {
+    grid-area: 2/4;
+    background-color: #DA4167;
+}
+
+.multiply:focus {
+    background-color: #da4167ac;
+}
+
+.subtract {
+    grid-area: 3/4;
+    background-color: #DA4167;
+}
+
+.subtract:focus {
+    background-color: #da4167ac;
+}
+
+.add {
+    grid-area: 4/4;
+    background-color: #DA4167;
+}
+
+.add:focus {
+    background-color: #da4167ac;
+}
+
+.equal {
+    grid-area: 5/4;
+    background-color: #E06D06;
+}
+
+.c {
+    grid-column: 2/4;
+    width: 100%;
+}
+
+.zero {
+    grid-column: 1/4;
+    width: 100%;
+}

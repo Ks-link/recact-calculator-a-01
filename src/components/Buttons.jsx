@@ -10,7 +10,7 @@ function Buttons({ buttonInput }) {
             }}
             key={i}
             type={button.type}
-            className={button.className}
+            className={button.className + ' btn'}
             value={button.value}
         >{button.text}</button>
     });

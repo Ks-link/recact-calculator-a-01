@@ -46,7 +46,7 @@ function Calculator() {
 
     function handleOp(pressed) {
         if (calcStage === 'firstOp') {
-            updateDisplay(pressed.text);
+            // updateDisplay(pressed.text);
             updateOp(pressed.value);
             updateCalcStage('secondOp');
         }
@@ -75,9 +75,6 @@ function Calculator() {
         }
 
         updateDisplay(result.toString());
-        // updateFirstNum(result.toString());
-        // updateSecondNum('');
-        // updateCalcStage('firstOp');
     }
 
     function handleClear(pressed) {
@@ -99,8 +96,8 @@ function Calculator() {
 
     return (
         <>
+            <h1 className='title'>A React Calculator That Reacts To Your Calculations</h1>
             <section className='calculator'>
-                <h1>Calculator</h1>
                 <h2 className='display'>{display}</h2>
                 <Buttons buttonInput={buttonInput} />
             </section>
