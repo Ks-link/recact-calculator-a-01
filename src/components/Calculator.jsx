@@ -6,6 +6,7 @@ function Calculator() {
     const [display, updateDisplay] = useState('');
     const [firstNum, updateFirstNum] = useState('');
     const [secondNum, updateSecondNum] = useState('');
+    const [memory, updateMemory] = useState('');
     const [op, updateOp] = useState('');
     const [calcStage, updateCalcStage] = useState('firstOp');
 
@@ -29,6 +30,9 @@ function Calculator() {
                 handleCalculate();
                 break;
 
+            case 'memory':
+                handleMem(pressed);
+                break;
             default:
                 break;
         }
@@ -46,7 +50,6 @@ function Calculator() {
 
     function handleOp(pressed) {
         if (calcStage === 'firstOp') {
-            // updateDisplay(pressed.text);
             updateOp(pressed.value);
             updateCalcStage('secondOp');
         }
@@ -75,6 +78,39 @@ function Calculator() {
         }
 
         updateDisplay(result.toString());
+    }
+
+    function handleMem(pressed) {
+        const num1 = Number(display);
+        const num2 = Number(memory);
+        let result = 0;
+
+        switch (pressed.text) {
+            case 'MS':
+                updateMemory(display);
+                break;
+
+            case 'MC':
+                updateMemory('');
+                break;
+
+            case 'MR':
+                updateDisplay(memory);
+                break;
+
+            case 'M+':
+                result = num1 + num2;
+                updateMemory(result);
+                break;
+
+            case 'M-':
+                result = num1 - num2;
+                updateMemory(result);
+                break;
+
+            default:
+                break;
+        }
     }
 
     function handleClear(pressed) {

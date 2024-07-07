@@ -20,7 +20,7 @@ html {
     bottom: 0;
     margin: auto;
     width: 20rem;
-    height: 30rem;
+    height: 34rem;
     border: 0.4rem solid #FFFAFF;
     border-radius: 2rem;
 }
@@ -99,16 +99,46 @@ html {
 }
 
 .equal {
-    grid-area: 5/4;
+    grid-area: 6/4;
     background-color: #E06D06;
 }
 
 .c {
-    grid-column: 2/4;
+    grid-column: 2/3;
     width: 100%;
 }
 
 .zero {
-    grid-column: 1/4;
+    grid-column: 1/3;
     width: 100%;
+}
+
+.decimal {
+    grid-column: 3/4;
+}
+
+.sign {
+    grid-area: 1/3;
+    background-color: #7CDF64;
+    color: #303036;
+}
+
+.percent {
+    grid-area: 2/3;
+    background-color: #7CDF64;
+    color: #303036;
+}
+
+.square-root {
+    grid-area: 5/4;
+    background-color: #F6AE2D;
+    color: #303036;
+}
+
+.square-root:focus {
+    background-color: #f6b02da6;
+}
+
+.ms, .mc, .mr, .m-minus, .m-plus {
+    background-color: #785964;
 }

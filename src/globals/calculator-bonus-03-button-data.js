@@ -102,6 +102,30 @@ export const calculatorButtons = [
         value: 0,
     },
     {
+        type: 'decimal',
+        className: 'decimal',
+        text: '.',
+        value: '.',
+    },
+    {
+        type: 'sign',
+        className: 'sign',
+        text: '+/-',
+        value: '+/-',
+    },
+    {
+        type: 'operator',
+        className: 'percent',
+        text: '%',
+        value: 'Percent',
+    },
+    {
+        type: 'operator',
+        className: 'square-root',
+        text: '\u221a',
+        value: 'Square Root',
+    },
+    {
         type: 'operator',
         className: 'multiply',
         text: '\u00d7',

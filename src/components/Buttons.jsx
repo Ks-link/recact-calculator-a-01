@@ -1,5 +1,5 @@
 import React from 'react'
-import { calculatorButtons } from '../globals/calculator-bonus-01-button-data'
+import { calculatorButtons } from '../globals/calculator-bonus-03-button-data'
 
 function Buttons({ buttonInput }) {
 
