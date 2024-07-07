@@ -58,16 +58,16 @@ function Calculator() {
         let result = 0;
 
         switch (op) {
-            case '+':
+            case 'Add':
                 result = num1 + num2;
                 break;
-            case '-':
+            case 'Subtract':
                 result = num1 - num2;
                 break;
-            case '*':
+            case 'Multiply':
                 result = num1 * num2;
                 break;
-            case '/':
+            case 'Divide':
                 result = num1 / num2;
                 break;
             default:

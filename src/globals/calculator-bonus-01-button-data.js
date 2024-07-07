@@ -12,6 +12,36 @@ export const calculatorButtons = [
         value: 'Clear'
     },
     {
+        type: 'memory',
+        className: 'ms',
+        text: 'MS',
+        value: 'Memory Save',
+    },
+    {
+        type: 'memory',
+        className: 'mc',
+        text: 'MC',
+        value: 'Memory Clear',
+    },
+    {
+        type: 'memory',
+        className: 'mr',
+        text: 'MR',
+        value: 'Memory Recall',
+    },
+    {
+        type: 'memory',
+        className: 'm-minus',
+        text: 'M-',
+        value: 'Memory Subtract',
+    },
+    {
+        type: 'memory',
+        className: 'm-plus',
+        text: 'M+',
+        value: 'Memory Addition',
+    },
+    {
         type: 'number',
         className: 'seven',
         text: 7,
@@ -74,31 +104,31 @@ export const calculatorButtons = [
     {
         type: 'operator',
         className: 'multiply',
-        text: ' \u00d7 ',
-        value: '*',
+        text: '\u00d7',
+        value: 'Multiply',
     },
     {
         type: 'operator',
         className: 'divide',
-        text: ' \u00f7 ',
-        value: '/',
+        text: '\u00f7',
+        value: 'Divide',
     },
     {
         type: 'operator',
         className: 'add',
-        text: ' + ',
-        value: '+',
+        text: '+',
+        value: 'Add',
     },
     {
         type: 'operator',
         className: 'subtract',
-        text: ' - ',
-        value: '-',
+        text: '-',
+        value: 'Subtract',
     },
     {
         type: 'enter',
         className: 'equal',
-        text: ' = ',
-        value: '=',
+        text: '=',
+        value: 'Equal',
     }
 ]
