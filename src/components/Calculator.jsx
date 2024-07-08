@@ -33,6 +33,15 @@ function Calculator() {
             case 'memory':
                 handleMem(pressed);
                 break;
+
+            case 'decimal':
+                handleDecimal();
+                break;
+
+            case 'sign':
+                handleSign();
+                break;
+
             default:
                 break;
         }
@@ -126,6 +135,37 @@ function Calculator() {
                 updateFirstNum('');
             } else if (calcStage === 'secondOp') {
                 updateSecondNum('');
+            }
+        }
+    }
+
+    function handleDecimal() {
+        if (calcStage === 'firstOp') {
+            updateFirstNum(firstNum + '.')
+            updateDisplay(firstNum + '.');
+        } else if (calcStage === 'secondOp') {
+            updateSecondNum(secondNum + '.')
+            updateDisplay(secondNum + '.');
+        }
+        updateDisplay(display + '.');
+    }
+
+    function handleSign() {
+        if (calcStage === 'firstOp') {
+            if (Array.from(firstNum)[0] === '-') {
+                updateFirstNum(Array.from(firstNum)[0] = '' + firstNum);
+                updateDisplay(Array.from(firstNum)[0] = '' + firstNum);
+            } else {
+                updateFirstNum('-' + firstNum)
+                updateDisplay('-' + firstNum);
+            }
+        } else if (calcStage === 'secondOp') {
+            if (Array.from(secondNum)[0] === '-') {
+                updateSecondNum(Array.from(secondNum)[0] = '' + secondNum);
+                updateDisplay(Array.from(secondNum)[0] = '' + secondNum);
+            } else {
+                updateSecondNum('-' + secondNum)
+                updateDisplay('-' + secondNum);
             }
         }
     }
