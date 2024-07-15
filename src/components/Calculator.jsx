@@ -12,6 +12,7 @@ function Calculator() {
 
 
     function buttonInput(pressed) {
+
         switch (pressed.type) {
             case 'number':
                 console.log('wow!');
@@ -40,6 +41,10 @@ function Calculator() {
 
             case 'sign':
                 handleSign();
+                break;
+
+            case 'sp-operator':
+                handleSpOperator(pressed);
                 break;
 
             default:
@@ -82,6 +87,7 @@ function Calculator() {
             case 'Divide':
                 result = num1 / num2;
                 break;
+
             default:
                 return;
         }
@@ -113,7 +119,7 @@ function Calculator() {
                 break;
 
             case 'M-':
-                result = num1 - num2;
+                result = num2 - num1;
                 updateMemory(result);
                 break;
 
@@ -166,6 +172,35 @@ function Calculator() {
             } else {
                 updateSecondNum('-' + secondNum)
                 updateDisplay('-' + secondNum);
+            }
+        }
+    }
+
+    function handleSpOperator(pressed) {
+        const num1 = Number(firstNum);
+        const num2 = Number(secondNum);
+        let result = 0;
+        if (pressed.value === 'Percent') {
+
+            if (calcStage === 'firstOp') {
+                result = num1 / 100;
+                updateFirstNum(result.toString());
+                updateDisplay(result.toString());
+            } else if (calcStage === 'secondOp') {
+                result = num2 / 100;
+                updateSecondNum(result.toString());
+                updateDisplay(result.toString());
+            }
+        } else if (pressed.value === 'Square Root') {
+
+            if (calcStage === 'firstOp') {
+                result = Math.sqrt(num1);
+                updateFirstNum(result.toString());
+                updateDisplay(result.toString());
+            } else if (calcStage === 'secondOp') {
+                result = Math.sqrt(num2);
+                updateSecondNum(result.toString());
+                updateDisplay(result.toString());
             }
         }
     }

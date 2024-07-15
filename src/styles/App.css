@@ -53,8 +53,8 @@ html {
     background-color: #087CA7;
     color: #FFFAFF;
     border: 1px solid #303036;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .ac, .c {
@@ -65,6 +65,7 @@ html {
 .divide {
     grid-area: 1/4;
     background-color: #DA4167;
+    font-size: 2.5rem;
 }
 
 .divide:focus {
@@ -74,6 +75,7 @@ html {
 .multiply {
     grid-area: 2/4;
     background-color: #DA4167;
+    font-size: 2.5rem;
 }
 
 .multiply:focus {
@@ -83,6 +85,7 @@ html {
 .subtract {
     grid-area: 3/4;
     background-color: #DA4167;
+    font-size: 2.5rem;
 }
 
 .subtract:focus {
@@ -92,6 +95,7 @@ html {
 .add {
     grid-area: 4/4;
     background-color: #DA4167;
+    font-size: 2.5rem;
 }
 
 .add:focus {
@@ -101,6 +105,7 @@ html {
 .equal {
     grid-area: 6/4;
     background-color: #E06D06;
+    font-size: 2.5rem;
 }
 
 .c {
@@ -133,10 +138,6 @@ html {
     grid-area: 5/4;
     background-color: #F6AE2D;
     color: #303036;
-}
-
-.square-root:focus {
-    background-color: #f6b02da6;
 }
 
 .ms, .mc, .mr, .m-minus, .m-plus {

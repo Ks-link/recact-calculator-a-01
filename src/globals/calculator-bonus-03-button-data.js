@@ -114,13 +114,13 @@ export const calculatorButtons = [
         value: '+/-',
     },
     {
-        type: 'operator',
+        type: 'sp-operator',
         className: 'percent',
         text: '%',
         value: 'Percent',
     },
     {
-        type: 'operator',
+        type: 'sp-operator',
         className: 'square-root',
         text: '\u221a',
         value: 'Square Root',
