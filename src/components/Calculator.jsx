@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Buttons from './Buttons'
 
 function Calculator() {
-    const [display, updateDisplay] = useState('');
+    const [display, updateDisplay] = useState('0');
     const [firstNum, updateFirstNum] = useState('');
     const [secondNum, updateSecondNum] = useState('');
     const [memory, updateMemory] = useState('');
@@ -130,17 +130,17 @@ function Calculator() {
 
     function handleClear(pressed) {
         if (pressed.text === 'AC') {
-            updateDisplay('');
+            updateDisplay('0');
             updateFirstNum('');
             updateSecondNum('');
             updateOp('');
             updateCalcStage('firstOp');
         } else if (pressed.text === 'C') {
-            updateDisplay('');
+            updateDisplay('0');
             if (calcStage === 'firstOp') {
-                updateFirstNum('');
+                updateFirstNum('0');
             } else if (calcStage === 'secondOp') {
-                updateSecondNum('');
+                updateSecondNum('0');
             }
         }
     }
